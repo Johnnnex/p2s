@@ -35,7 +35,7 @@ const HomePage = () => {
         <section className="home-banner-area pb-[150px] pt-[100px]">
           <div className="container w-[90%] mx-auto">
             <div className="row justify-content-center fullscreen align-items-center">
-              <div className="col-lg-5 col-md-8 home-banner-left">
+              <div className="col-lg-5 mb-40 col-md-8 home-banner-left">
                 <h1 className="text-white">
                   Become an Expert
                   <Typewriter

@@ -47,7 +47,7 @@ const Footer = () => {
     <footer className={`${sGrotesk.className} footer-area section-gap`}>
       <div className="container w-[90%] mx-auto">
         <div className="row">
-          <div className="col-lg-2 col-md-6 single-footer-widget">
+          {/* <div className="col-lg-2 col-md-6 single-footer-widget">
             <h4>Top Products</h4>
             <ul>
               <li><a href="#">Managed Website</a></li>
@@ -55,7 +55,7 @@ const Footer = () => {
               <li><a href="#">Power Tools</a></li>
               <li><a href="#">Marketing Service</a></li>
             </ul>
-          </div>
+          </div> */}
           <div className="col-lg-2 col-md-6 single-footer-widget">
             <h4>Quick Links</h4>
             <ul>
@@ -81,7 +81,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-lg-2 col-md-6 single-footer-widget">
+          {/* <div className="col-lg-2 col-md-6 single-footer-widget">
             <h4>Company</h4>
             <ul>
               <li><a href="#">The Team</a></li>
@@ -107,25 +107,23 @@ const Footer = () => {
               method="get" className="form-inline">
                 <input className="form-control" name="EMAIL" placeholder="Your Email Address" type="email" />
                 <button className="click-btn btn btn-default text-uppercase">subscribe</button>
-                {/* <div style={{position: "absolute", left: "-5000px"}}>
-                  <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text" />
-                </div> */}
+                
 
                 <div className="info"></div>
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="footer-bottom row align-items-center">
           <p className="footer-text m-0 col-lg-8 col-md-12">
             Copyright 2023 | All rights reserved
           </p>
-          <div className="col-lg-4 col-md-12 footer-social">
+          {/* <div className="col-lg-4 col-md-12 footer-social">
             <a href="#"><i className="fa-brands fa-facebook-f" style={{color: "#ffffff"}}></i></a>
             <a href="#"><i className="fa-brands fa-twitter" style={{color: "#ffffff"}}></i></a>
             <a href="#"><i className="fa-brands fa-dribbble" style={{color: "#ffffff"}}></i></a>
             <a href="#"><i className="fa-brands fa-behance" style={{color: "#ffffff"}}></i></a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

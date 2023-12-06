@@ -43,7 +43,7 @@ const Testimonial = () => {
                 </div>
 
                 <div className="offset-lg-1 col-lg-6">
-                    <Image height={1} width={900} src="/img/testimonial/t1.jpg" alt="" />
+                    <Image height={1} width={900} src="/img/south-africa-man.jpg" alt="" />
                 </div>
             </div>
             </SwiperSlide>
@@ -68,7 +68,7 @@ const Testimonial = () => {
                 </div>
 
                 <div className="offset-lg-1 col-lg-6">
-                <Image height={1} width={900} src="/img/testimonial/t1.jpg" alt="" />
+                <Image height={1} width={900} src="/img/Man_Black_OnComputer.jpg" alt="" />
                 </div>
             </div>
             </SwiperSlide>
