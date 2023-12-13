@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Poppins, Space_Grotesk } from 'next/font/google'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 const poppins = Poppins({ 
@@ -15,7 +15,7 @@ const sGrotesk = Space_Grotesk({
 })
 
 const Header = () => {
-  const { pathname } = useRouter()
+  const { pathname, events } = useRouter()
   const [navState, setNavState] = useState(false)
   const linkAttr = [
     {
@@ -44,6 +44,19 @@ const Header = () => {
       id: 5
     },
   ]
+  useEffect(() => {
+    const onHashChangeStart = (url) => {
+      setNavState(false)
+    };
+
+    events.on("hashChangeStart", onHashChangeStart)
+    events.on("routeChangeStart", onHashChangeStart)
+
+    return () => {
+        events.off("hashChangeStart", onHashChangeStart)
+        events.off("routeChangeStart", onHashChangeStart)
+    };
+}, [events]);
   const navEl = linkAttr.map(({text, path, id}) => {
     return (
       <li key={id} className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px] ${path == pathname && "activeLink"}`}>
@@ -56,61 +69,61 @@ const Header = () => {
   return (
     <header className="default-header">
       <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="container">
-          <Link className={`navbar-brand text-white ${poppins.className} font-[600]`} href="/">
+        <div className="w-full flex justify-between items-center">
+          <Link className={`text-white ${poppins.className} font-[600]`} href="/">
             {/* <Image height={1} width={50} src="/img/logo.png" alt="logo" /> */}
             P2S
           </Link>
-          <button onClick={() => setNavState(prev => !prev)} className="navbar-toggler" type="button">
+          <button onClick={() => setNavState(!navState)} className="navbar-toggler" type="button">
             <span className="lnr lnr-menu"></span>
           </button>
-            <div className={`navbar-collapse transition-[.4s] md:max-h-full md:visible ${navState == true ? "" : "hidden md:block"} justify-content-end align-items-center`}>
-              <ul className={`${sGrotesk.className} navbar-nav`}>
-                <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
-                  <Link className={"/" == pathname && "activeLink"} href="/">
-                    Home
-                  </Link>
-                </li>
-                <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
-                  <Link className={"/homepage/about" == pathname && "activeLink"} href="/homepage/about">
-                    About
-                  </Link>
-                </li>
-                <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
-                  <Link className={"/homepage/courses" == pathname && "activeLink"} href="/homepage/courses">
-                    Courses
-                  </Link>
-                </li>
-                {/* <li className="dropdown">
-                  <a className="dropdown-toggle" href="#" data-toggle="dropdown">
-                    Pages
-                  </a>
-                  <div className="dropdown-menu">
-                    <a className="dropdown-item" href="elements.html">Elements</a>
-                    <a className="dropdown-item" href="course-details.html">Course Details</a>
-                  </div>
-                </li>
-                <li className="dropdown">
-                  <a className="dropdown-toggle" href="#" data-toggle="dropdown">
-                    Blog
-                  </a>
-                  <div className="dropdown-menu">
-                    <a className="dropdown-item" href="blog-home.html">Blog Home</a>
-                    <a className="dropdown-item" href="blog-single.html">Blog Details</a>
-                  </div>
-                </li> */}
-                <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
-                  <Link className={"/homepage/contact" == pathname && "activeLink"} href="/homepage/contact">
-                    Contact
-                  </Link>
-                </li>
+          <div className={`flex items-center text-center pb-[30px] md:pb-0 pr-[1vw] absolute md:relative bg-[#FC2C2C30] md:bg-transparent w-full left-0 md:top-0 top-[7vh] flex-col md:flex-row transition-[.4s] md:max-h-full ${navState == true ? "" : "classInvisible"} justify-content-end align-items-center`}>
+            <ul className={`${sGrotesk.className} navbar-nav`}>
+              <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
+                <Link className={"/" == pathname && "activeLink"} href="/">
+                  Home
+                </Link>
+              </li>
+              <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
+                <Link className={"/homepage/about" == pathname && "activeLink"} href="/homepage/about">
+                  About
+                </Link>
+              </li>
+              <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
+                <Link className={"/homepage/courses" == pathname && "activeLink"} href="/homepage/courses">
+                  Courses
+                </Link>
+              </li>
+              {/* <li className="dropdown">
+                <a className="dropdown-toggle" href="#" data-toggle="dropdown">
+                  Pages
+                </a>
+                <div className="dropdown-menu">
+                  <a className="dropdown-item" href="elements.html">Elements</a>
+                  <a className="dropdown-item" href="course-details.html">Course Details</a>
+                </div>
+              </li>
+              <li className="dropdown">
+                <a className="dropdown-toggle" href="#" data-toggle="dropdown">
+                  Blog
+                </a>
+                <div className="dropdown-menu">
+                  <a className="dropdown-item" href="blog-home.html">Blog Home</a>
+                  <a className="dropdown-item" href="blog-single.html">Blog Details</a>
+                </div>
+              </li> */}
+              <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
+                <Link className={"/homepage/contact" == pathname && "activeLink"} href="/homepage/contact">
+                  Contact
+                </Link>
+              </li>
 
-              </ul>
-              <Link href="/auth/sign-up" className={`${sGrotesk.className} flex gap-[10px]`}>
-                <button className="btn-def btn-red">Apply Now</button>
-              </Link>
-          
-            </div>
+            </ul>
+            <Link href="/auth/sign-up" className={`${sGrotesk.className} flex gap-[10px]`}>
+              <button className="btn-def btn-red">Apply Now</button>
+            </Link>
+        
+          </div>
         </div>
       </nav>
     </header>

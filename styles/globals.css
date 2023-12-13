@@ -19,7 +19,12 @@ html {
   scroll-behavior: smooth;
 }
 .classInvisible {
-  visibility: hidden !important;
+  display: none !important;
+}
+@media (min-width: 768px) {
+  .classInvisible {
+    display: flex !important;
+  }
 }
 .Toastify__toast-body {
   font-family: "Space Grotesk", sans-serif !important;
