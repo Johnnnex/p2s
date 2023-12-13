@@ -57,10 +57,10 @@ const Header = () => {
     <header className="default-header">
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
-          <a className={`navbar-brand text-white ${poppins.className} font-[600]`} href="index.html">
+          <Link className={`navbar-brand text-white ${poppins.className} font-[600]`} href="/">
             {/* <Image height={1} width={50} src="/img/logo.png" alt="logo" /> */}
             P2S
-          </a>
+          </Link>
           <button onClick={() => setNavState(prev => !prev)} className="navbar-toggler" type="button">
             <span className="lnr lnr-menu"></span>
           </button>
