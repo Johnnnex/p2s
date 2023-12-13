@@ -30,14 +30,11 @@ const Testimonial = () => {
                     <Image height={1} width={30} src="/img/quote.png" alt="" />
                     <div className="mt-40 text">
                         <p>
-                        As conscious traveling Paup ers we must always be oncerned
-                        about our dear Mother Earth. If you think about it, you
-                        travel across her face and She is the host to your
-                        journey.
+                        Partnering to Succeed has been a revelation for me! The expansive array of courses, coupled with lifetime access, made diving into the tech world an absolute joy. The exclusive student membership added an extra layer of excitement with its fantastic perks. The expert mentors at Partnering to Succeed were like beacons in the coding wilderness, guiding me every step of the way. And the real-time support? It's not just a feature; it's a superhero hotline for tech emergencies! Thanks to Partnering to Succeed, I'm not just learning; I'm thriving in the digital realm!
                         </p>
                     </div>
-                    <h4>Fanny Spencer</h4>
-                    <p>Chief Executive, Amazon</p>
+                    <h4>Mr Daniel</h4>
+                    <p>Student at Partnering to succeed</p>
                     </div>
                 </div>
                 </div>
@@ -55,14 +52,11 @@ const Testimonial = () => {
                     <Image height={1} width={30} src="/img/quote.png" alt="" />
                     <div className="mt-40 text">
                         <p>
-                        As conscious traveling Paup ers we must always be oncerned
-                        about our dear Mother Earth. If you think about it, you
-                        travel across her face <br />
-                        and She is the host to your journey.
+                        Enrolling in Partnering to Succeed was a turning point in my tech journey. The wealth of courses, including the lifetime access feature, allowed me to explore and learn at my own pace. The student membership made the experience even more enriching, providing exclusive benefits that truly set Partnering to Succeed apart. The expert mentors played a pivotal role in demystifying complex concepts, turning challenges into triumphs. The real-time support is the secret sauce that makes learning here a delight. Partnering to Succeed is more than a platform; it's a dynamic community propelling me towards tech excellence!
                         </p>
                     </div>
-                    <h4>Fanny Spencer</h4>
-                    <p>Chief Executive, Amazon</p>
+                    <h4>Mr Samuel</h4>
+                    <p>Former Student, Partnering to succeed</p>
                     </div>
                 </div>
                 </div>
