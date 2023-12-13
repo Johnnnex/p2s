@@ -18,6 +18,9 @@
 html {
   scroll-behavior: smooth;
 }
+.classInvisible {
+  visibility: hidden !important;
+}
 .Toastify__toast-body {
   font-family: "Space Grotesk", sans-serif !important;
 }

@@ -64,53 +64,53 @@ const Header = () => {
           <button onClick={() => setNavState(prev => !prev)} className="navbar-toggler" type="button">
             <span className="lnr lnr-menu"></span>
           </button>
+            <div className={`navbar-collapse transition-[.4s] md:max-h-full md:visible ${navState == true ? "" : "hidden md:block"} justify-content-end align-items-center`}>
+              <ul className={`${sGrotesk.className} navbar-nav`}>
+                <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
+                  <Link className={"/" == pathname && "activeLink"} href="/">
+                    Home
+                  </Link>
+                </li>
+                <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
+                  <Link className={"/homepage/about" == pathname && "activeLink"} href="/homepage/about">
+                    About
+                  </Link>
+                </li>
+                <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
+                  <Link className={"/homepage/courses" == pathname && "activeLink"} href="/homepage/courses">
+                    Courses
+                  </Link>
+                </li>
+                {/* <li className="dropdown">
+                  <a className="dropdown-toggle" href="#" data-toggle="dropdown">
+                    Pages
+                  </a>
+                  <div className="dropdown-menu">
+                    <a className="dropdown-item" href="elements.html">Elements</a>
+                    <a className="dropdown-item" href="course-details.html">Course Details</a>
+                  </div>
+                </li>
+                <li className="dropdown">
+                  <a className="dropdown-toggle" href="#" data-toggle="dropdown">
+                    Blog
+                  </a>
+                  <div className="dropdown-menu">
+                    <a className="dropdown-item" href="blog-home.html">Blog Home</a>
+                    <a className="dropdown-item" href="blog-single.html">Blog Details</a>
+                  </div>
+                </li> */}
+                <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
+                  <Link className={"/homepage/contact" == pathname && "activeLink"} href="/homepage/contact">
+                    Contact
+                  </Link>
+                </li>
 
-          <div className={`navbar-collapse transition-[.4s] md:max-h-full md:visible ${navState == false ? "" : ""} justify-content-end align-items-center`}>
-            <ul className={`${sGrotesk.className} navbar-nav`}>
-              <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
-                <Link className={"/" == pathname && "activeLink"} href="/">
-                  Home
-                </Link>
-              </li>
-              <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
-                <Link className={"/homepage/about" == pathname && "activeLink"} href="/homepage/about">
-                  About
-                </Link>
-              </li>
-              <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
-                <Link className={"/homepage/courses" == pathname && "activeLink"} href="/homepage/courses">
-                  Courses
-                </Link>
-              </li>
-              {/* <li className="dropdown">
-                <a className="dropdown-toggle" href="#" data-toggle="dropdown">
-                  Pages
-                </a>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="elements.html">Elements</a>
-                  <a className="dropdown-item" href="course-details.html">Course Details</a>
-                </div>
-              </li>
-              <li className="dropdown">
-                <a className="dropdown-toggle" href="#" data-toggle="dropdown">
-                  Blog
-                </a>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="blog-home.html">Blog Home</a>
-                  <a className="dropdown-item" href="blog-single.html">Blog Details</a>
-                </div>
-              </li> */}
-              <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
-                <Link className={"/homepage/contact" == pathname && "activeLink"} href="/homepage/contact">
-                  Contact
-                </Link>
-              </li>
-
-            </ul>
-            <Link href="/auth/sign-up" className={`${sGrotesk.className} flex gap-[10px]`}>
-              <button className="btn-def btn-red">Apply Now</button>
-            </Link>
-          </div>
+              </ul>
+              <Link href="/auth/sign-up" className={`${sGrotesk.className} flex gap-[10px]`}>
+                <button className="btn-def btn-red">Apply Now</button>
+              </Link>
+          
+            </div>
         </div>
       </nav>
     </header>

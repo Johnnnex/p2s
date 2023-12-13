@@ -26,7 +26,7 @@ const Register = () => {
   return (
     <>
       <HeadComp title="Partnering To Succeed - Register" />
-      <main className={`hold-transition h-[100vh] pt-[15vh] register-page ${poppins.className}`}>
+      <main className={`hold-transition h-full pt-[10vh] register-page ${poppins.className}`}>
 
         <section class="hold-transition pb-[20px]">
     <div class="w-[30%] mx-auto">
@@ -39,8 +39,16 @@ const Register = () => {
 
         <form action="../../index.html" className="mb-[1rem]" method="post">
           <div class="form-group has-feedback">
-            <input type="text" class="form-control" placeholder="Full name" />
+            <input type="text" class="form-control" placeholder="First name" />
             <i class="fa-solid fa-user form-control-feedback"></i>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="Last name" />
+            <i class="fa-solid fa-user form-control-feedback"></i>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="Role" />
+            <i class="fa-solid fa-certificate form-control-feedback"></i>
           </div>
           <div class="form-group has-feedback">
             <input type="email" class="form-control" placeholder="Email" />
@@ -52,6 +60,23 @@ const Register = () => {
           </div>
           <div class="form-group has-feedback">
             <input type="password" class="form-control" placeholder="Retype password" />
+            <i class="fa-solid fa-lock form-control-feedback"></i>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="Company" />
+            <i class="fa-solid fa-lock form-control-feedback"></i>
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="Title" />
+            <i class="fa-solid fa-lock form-control-feedback"></i>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="Phone number" />
+            <i class="fa-solid fa-lock form-control-feedback"></i>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="About" />
             <i class="fa-solid fa-lock form-control-feedback"></i>
           </div>
           <div class="">
