@@ -16,9 +16,9 @@ const CoursesContainer = () => {
   const apiUrl = "http://127.0.0.1:8000/api/popularcourses"
   const { push } = useRouter()
   const reDirect = (id) => {
-    const { toastWarning } = ToastImporter("You need to Sign-Up first!")
+    const { toastWarning } = ToastImporter("You need to Register first!")
     toastWarning()
-    push(`/auth?course=${id}`)
+    push(`/auth/sign-up?course=${id}`)
   }
   const fetchCourses = async () => {
     try {

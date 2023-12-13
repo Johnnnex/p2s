@@ -44,7 +44,7 @@ const SignIn = () => {
     <>
         <HeadComp title="Partnering To Succeed - Sign In" />
         <main className={`hold-transition h-[100vh] pt-[15vh] login-page ${poppins.className}`}>
-          <section className="w-[28%] mx-auto">
+          <section className="md:w-[28%] w-[90%] mx-auto">
             <div className="login-logo">
               <Link href="/"><b>P2S</b></Link>
             </div>
