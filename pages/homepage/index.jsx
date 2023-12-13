@@ -67,7 +67,7 @@ const HomePage = () => {
         <section className={`feature-area ${sGrotesk.className}`}>
           <div className="container-fluid w-[95%] mx-auto">
             <div className="feature-inner row">
-              <div className="col-lg-2 col-md-6">
+              <div className="col-lg-4 col-md-6">
                 <div className="feature-item d-flex">
                   <i className="ti-notepad"></i>
                   <div>
@@ -83,7 +83,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2 col-md-6">
+              <div className="col-lg-4 col-md-6">
                 <div className="feature-item item-red d-flex">
                   <i className="ti-comments-smiley"></i>
                   <div className="">
@@ -105,7 +105,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2 col-md-6">
+              <div className="col-lg-4 col-md-6">
                 <div className="feature-item d-flex border-right-0">
                   <i className="ti-desktop"></i>
                   <div>

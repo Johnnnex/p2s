@@ -31,7 +31,7 @@ const Courses = () => {
         <section className={`${sGrotesk.className} feature-area`}>
           <div className="container-fluid">
             <div className="feature-inner row">
-              <div className="col-lg-2 col-md-6">
+              <div className="col-lg-4 col-md-6">
                 <div className="item-red feature-item d-flex">
                   <i className="ti-medall"></i>
                   <div className="ml-20">
@@ -50,7 +50,7 @@ const Courses = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2 col-md-6">
+              <div className="col-lg-4 col-md-6">
                 <div className="feature-item d-flex">
                   <i className="ti-cup"></i>
                   <div className="ml-20">
@@ -69,7 +69,7 @@ const Courses = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="col-lg-2 col-md-6">
+              {/* <div className="col-lg-4 col-md-6">
                 <div className="feature-item d-flex border-right-0">
                   <i className="ti-desktop"></i>
                   <div className="ml-20">

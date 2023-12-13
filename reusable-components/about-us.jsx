@@ -22,7 +22,8 @@ const AboutUs = () => {
                     About Us
                   </h2>
                   <p>
-                  Welcome to Partnering To Succeed, where technology meets education, innovation, and expert support. Our journey began with a passion for making technology accessible to all, fostering a community of lifelong learners and empowering businesses with cutting-edge solutions.
+                    Welcome to Partnering To Succeed, where technology meets education, innovation, and expert support. Our journey began with a passion for making technology accessible to all, fostering a community of lifelong learners and empowering businesses with cutting-edge solutions. <br /><br />
+                    At Partnering to succeed, we're not just about courses; we're on a mission to transform tech education into an exhilarating journey. Picture this as your digital launchpad, propelling you into the exciting realms of technology, innovation, and limitless possibilities.
                   </p>
                 </div>
               </div>

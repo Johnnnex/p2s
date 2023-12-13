@@ -32,7 +32,7 @@ const About = () => {
           <section className={`${sGrotesk.className} text-[14px] feature-area`}>
             <div className="container-fluid">
               <div className="feature-inner row">
-                <div className="col-lg-2 col-md-6">
+                <div className="col-lg-4 col-md-6">
                   <div className="feature-item d-flex">
                     <i className="ti-crown"></i>
                     <div className="ml-20">
@@ -54,7 +54,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-6">
+                <div className="col-lg-4 col-md-6">
                   <div className="feature-item item-red d-flex">
                     <i className="ti-cup"></i>
                     <div className="ml-20">
