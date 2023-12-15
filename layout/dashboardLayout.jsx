@@ -15,44 +15,67 @@ const poppins = Poppins({
 const DashboardLayout = () => {
   const { sessionItem, setIsLoggedIn } = useData()
   const { pathname, push } = useRouter()
-  const navLinks = [
+  // if (!!sessionItem == true) {
+  //   const { firstname, lastname, role, userIdentity } = sessionItem
+  // }
+  let navLinks = [
     {
-      id: 1,
-      path: "/dashboard",
-      title: "Dashboard",
-      icon : "fa fa-dashboard"
-    },
-    {
-      id: 1,
-      path: "/dashboard/user",
-      title: "Profile",
-      icon : "fa-regular fa-user"
-    },
-    {
-      id: 2,
-      path: "/dashboard/course",
-      title: "Courses",
-      icon: "fa-solid fa-book"
-    },
-    {
-      id: 3,
-      path: "/dashboard/message",
-      title: "Message",
-      icon: "fa-regular fa-message"
-    },
-    {
-      id: 3,
-      path: "/dashboard/message-list",
-      title: "Message List",
-      icon: "fa-solid fa-list-check"
-    },
-    {
-      id: 4,
-      path: "/dashboard/student-management",
-      title: "Manage Student",
-      icon: "fa-solid fa-people-roof"
-    },
+      id: null,
+      path: "",
+      title: "",
+      icon: ""
+    }
   ]
+  if(!!sessionItem == true && sessionItem.role == "admin") {
+    navLinks = 
+      [
+        {
+          id: 1,
+          path: "/dashboard",
+          title: "Dashboard",
+          icon : "fa fa-dashboard"
+        },
+        {
+          id: 1,
+          path: "/dashboard/user",
+          title: "Profile",
+          icon : "fa-regular fa-user"
+        },
+        {
+          id: 2,
+          path: "/dashboard/course",
+          title: "Courses",
+          icon: "fa-solid fa-book"
+        },
+        {
+          id: 3,
+          path: "/dashboard/message",
+          title: "Message",
+          icon: "fa-regular fa-message"
+        },
+        {
+          id: 3,
+          path: "/dashboard/message-list",
+          title: "Message List",
+          icon: "fa-solid fa-list-check"
+        },
+        {
+          id: 4,
+          path: "/dashboard/student-management",
+          title: "Manage Student",
+          icon: "fa-solid fa-people-roof"
+        },
+        {
+          id: 5,
+          path: "/dashboard/student-management",
+          title: "Student and Course",
+          icon: "fa-solid fa-graduation-cap"
+        },
+      ]
+  }
+  else if (!!sessionItem == true && sessionItem.role == "teacher") {
+
+  }
   const links = navLinks.map(({id, path, title, icon}) => {
     return (
       <li key={id} className={`cursor-pointer ${path == pathname && "active"}`}>
@@ -77,7 +100,7 @@ const DashboardLayout = () => {
 
     <a href="" className="logo">
       <span className="logo-mini"><b>A</b>LT</span>
-      <span className="logo-lg"><b>P2S</b>&nbsp; Admin</span>
+      <span className="logo-lg"><b>P2S </b>{sessionItem?.role == "admin" ? "Admin" : null}</span>
     </a>
     <nav className="navbar-static-top nav">
       <section className="flex w-full text-white items-center bg-[#3c8dbc] justify-between ">
@@ -183,7 +206,7 @@ const DashboardLayout = () => {
           <Image src="/images/user-img.jpg" height={1} width={200} className="img-circle" alt="User Image" />
         </div>
         <div className="pull-left info">
-          <p>{sessionItem?.fullName}</p>
+          <p>{sessionItem?.firstname}</p>
           <a href="#"><i className="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>

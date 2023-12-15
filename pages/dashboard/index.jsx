@@ -11,12 +11,10 @@ const poppins = Poppins({
   })
 
 const Dashboard = () => {
-  const { isLoggedIn, setIsOnHomepage } = useData()
+  const { isLoggedIn, setIsOnHomepage, sessionItem } = useData()
   const { push } = useRouter()
-  const { toastWarning } = ToastImporter("You're not signed in!")
   useEffect (() => {
     if (isLoggedIn != true) {
-      toastWarning()
       push("/auth")
     }
     else {
@@ -56,29 +54,34 @@ const Dashboard = () => {
             </div>
             {/* <!-- /.box-header --> */}
                <div class="box-body" id="myprofile">
-              <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
+              <strong><i class="fa fa-book margin-r-5"></i> Name:</strong>
 
               <p class="text-muted">
-             {/* B.S. in Computer Science from the University of Tennessee at Knoxville -- */}
+                {sessionItem?.firstname}
           
               </p>
 
-              <hr />
+              
 
-              <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
+              <strong><i class="fa fa-map-marker margin-r-5"></i> Role:</strong>
 
-               <p class="text-muted"></p>
+               <p class="text-muted">
+                {sessionItem?.role}
+               </p>
+              <strong><i class="fa fa-map-marker margin-r-5"></i> About:</strong>
 
-              <hr />
+               <p class="text-muted">
+                lorem ipsum dolor amet
+               </p>
 
-              <strong><i class="fa fa-pencil margin-r-5"></i>Skills</strong>
+              <strong><i class="fa fa-pencil margin-r-5"></i>Skills:</strong>
 
-              <p>
-                {/* <!-- <span class="label label-danger">UI Design</span>
+              <p className='flex flex-wrap gap-y-1 mt-1'>
+                <span class="label label-danger">UI Design</span>
                 <span class="label label-success">Coding</span>
                 <span class="label label-info">Javascript</span>
                 <span class="label label-warning">PHP</span>
-                <span class="label label-primary">Node.js</span> --> */}
+                <span class="label label-primary">Node.js</span>
               </p>
 
               <hr />

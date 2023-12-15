@@ -48,7 +48,7 @@ const Register = () => {
   const submitHandler = (e) => {
     e.preventDefault()
     setIsLoading(true)
-    useRegister(formData, setIsLoading)
+    useRegister(formData, setIsLoading, push)
   }
   return (
     <>
@@ -90,15 +90,12 @@ const Register = () => {
             <i className="fa-solid fa-user form-control-feedback"></i>
           </div>
           <div className="form-group has-feedback">
-            <input 
-              type="text" 
-              className="form-control" 
-              onChange={inputChange} 
-              placeholder="Role" 
-              value={formData.role}
-              name="role"
-              required
-            />
+            <select className="form-control" onChange={inputChange} name="role">
+              <option disabled>Select your role</option>
+              <option value="admin">Admin</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Student">Student</option>
+            </select>
             <i className="fa-solid fa-certificate form-control-feedback"></i>
           </div>
           <div className="form-group has-feedback">

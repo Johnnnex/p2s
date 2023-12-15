@@ -1,7 +1,7 @@
 import { ToastImporter } from "../toast"
 
 
-export const useRegister = async (formData, setLoading) => {
+export const useRegister = async (formData, setLoading, push) => {
     const apiUrl = "http://127.0.0.1:8000/api/register"
 
     const { 
@@ -40,11 +40,30 @@ export const useRegister = async (formData, setLoading) => {
             },
             body: jsonPayload
         })
-        const data = await result.json()
-        const { toastDanger, toastSuccess } = ToastImporter(data)
-        if (result.ok) {
+        const res = await result.json()
+        const { toastDanger } = ToastImporter(res)
+        if (result.status == 201) {
+            let regMsg
+            let shouldRedirect
+            switch(role) {
+                case "admin":
+                    regMsg = "Registration successful, check your mail and await admin approval!"
+                    break
+                case "Teacher":
+                    regMsg = "Registration successful, check your mail and await admin approval!"
+                    break
+                case "Student":
+                    regMsg = "Registration successful, you can now proceed to sign-in!"
+                    shouldRedirect = true
+                    break
+            }
+            const { toastSuccess } = ToastImporter(regMsg)
+            console.log(regMsg)
             toastSuccess()
             setLoading(false)
+            if (shouldRedirect === true){
+                push("/auth")
+            }
         }
         else {
             toastDanger()
