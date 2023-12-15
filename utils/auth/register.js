@@ -2,7 +2,7 @@ import { ToastImporter } from "../toast"
 
 
 export const useRegister = async (formData, setLoading, push) => {
-    const apiUrl = "http://127.0.0.1:8000/api/register"
+    const apiUrl = "http://api.partneringtosucceed.com/api/register"
 
     const { 
         fname,

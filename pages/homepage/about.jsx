@@ -21,7 +21,7 @@ const About = () => {
   return (
     <>
         <HeadComp title="Partnering To Succeed - About" />
-        <main classNameName={`${sGrotesk.className}`}>
+        <main className={`${sGrotesk.className}`}>
           <Hero 
             title="About Us"
             breadCrumb="About"

@@ -2,7 +2,7 @@ import { ToastImporter } from "../toast"
 
 
 export const Login = async (email, password, setLoading, setIsLoggedIn) => {
-    const apiUrl = "http://127.0.0.1:8000/api/login"
+    const apiUrl = "http://api.partneringtosucceed.com/api/login"
 
 
     const payload = {

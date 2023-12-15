@@ -13,7 +13,7 @@ const sGrotesk = Space_Grotesk({
 })
 const CoursesContainer = () => {
   const [courseData, setCourseData] = useState(null)
-  const apiUrl = "http://127.0.0.1:8000/api/popularcourses"
+  const apiUrl = "http://api.partneringtosucceed.com/api/popularcourses"
   const { push } = useRouter()
   const reDirect = (id) => {
     const { toastWarning } = ToastImporter("You need to Register first!")

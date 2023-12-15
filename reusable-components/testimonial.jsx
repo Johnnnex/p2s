@@ -8,7 +8,7 @@ const Testimonial = () => {
     <section className="testimonials-area section-gap">
         <div className="container w-[90%] mx-auto">
         <Swiper
-            classNameName="w-[100%] h-fit testi-slider"
+            className="w-[100%] h-fit testi-slider"
             modules={[A11y, Autoplay, Pagination]}
             pagination={{
             dynamicBullets: true,
