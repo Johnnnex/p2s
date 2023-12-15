@@ -58,7 +58,7 @@ const Register = () => {
         <section className="hold-transition pb-[20px]">
     <div className="md:w-[30%] w-[90%] mx-auto">
       <div className="register-logo">
-        <Link href="../../index2.html"><b>P2S</b></Link>
+        <Link href="/"><b>P2S</b></Link>
       </div>
 
       <div className="register-box-body">
@@ -90,8 +90,8 @@ const Register = () => {
             <i className="fa-solid fa-user form-control-feedback"></i>
           </div>
           <div className="form-group has-feedback">
-            <select className="form-control" onChange={inputChange} name="role">
-              <option disabled>Select your role</option>
+            <select required className="form-control" onChange={inputChange} name="role">
+              <option selected disabled value="">Select your role</option>
               <option value="admin">Admin</option>
               <option value="Teacher">Teacher</option>
               <option value="Student">Student</option>

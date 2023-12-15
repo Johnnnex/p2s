@@ -54,7 +54,7 @@ const Dashboard = () => {
             </div>
             {/* <!-- /.box-header --> */}
                <div class="box-body" id="myprofile">
-              <strong><i class="fa fa-book margin-r-5"></i> Name:</strong>
+              <strong><i class="fa fa-user margin-r-5"></i> Name:</strong>
 
               <p class="text-muted">
                 {sessionItem?.firstname}
@@ -63,12 +63,12 @@ const Dashboard = () => {
 
               
 
-              <strong><i class="fa fa-map-marker margin-r-5"></i> Role:</strong>
+              <strong><i class="fa fa-briefcase margin-r-5"></i> Role:</strong>
 
                <p class="text-muted">
                 {sessionItem?.role}
                </p>
-              <strong><i class="fa fa-map-marker margin-r-5"></i> About:</strong>
+              <strong><i class="fa fa-info margin-r-5"></i> About:</strong>
 
                <p class="text-muted">
                 lorem ipsum dolor amet
