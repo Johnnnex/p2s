@@ -18,11 +18,11 @@ const Hero = ({title, children, breadCrumb, bLink}) => {
                 <p className="mx-auto text-white  mt-20 mb-40">
                     {children}
                 </p>
-                <div className="link-nav">
+                <div className="link-nav mt-20">
                 <span className="border-y text-white py-[10px] space-x-4">
                     <Link className="text-white hover:text-[#ffffff50]" href="/">Home </Link>
                     <i className="lnr lnr-arrow-right"></i>
-                    <Link className="text-white" href={`/homepage/${bLink}`}>{breadCrumb}</Link>
+                    <Link className="text-[#ffffff50]" href={`/homepage/${bLink}`}>{breadCrumb}</Link>
                 </span>
                 </div>
             </div>

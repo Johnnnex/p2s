@@ -58,19 +58,14 @@ const Contact = () => {
                 <form className="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
                   <div className="row">
                     <div className="col-lg-6 form-group">
-                      <input name="name" placeholder="Enter your name" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Enter your name'"
-                      className="common-input mb-20 form-control" required="" type="text" />
+                      <input name="name" placeholder="Enter your name" className="common-input mb-20 form-control" required="" type="text" />
 
-                      <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-                      onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Enter email address'" className="common-input mb-20 form-control"
-                      required="" type="email" />
+                      <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" className="common-input mb-20 form-control"nrequired="" type="email" />
 
-                      <input name="subject" placeholder="Enter subject" onFocus="this.placeholder = ''" onBlur="this.placeholder = 'Enter subject'"
-                      className="common-input mb-20 form-control" required="" type="text" />
+                      <input name="subject" placeholder="Enter subject" className="common-input mb-20 form-control" required="" type="text" />
                     </div>
                     <div className="col-lg-6 form-group">
-                      <textarea className="common-textarea form-control" name="message" placeholder="Enter Messege" onFocus="this.placeholder = ''"
-                      onBlur="this.placeholder = 'Enter Messege'" required=""></textarea>
+                      <textarea className="common-textarea form-control" name="message" placeholder="Enter Messege" required=""></textarea>
                     </div>
                     <div className="col-lg-12">
                       <div className="alert-msg" style={{ textAlign: "left"}}></div>
