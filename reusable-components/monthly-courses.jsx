@@ -16,7 +16,7 @@ const MonthlyCourses = () => {
   const reDirect = (id) => {
     const { toastWarning } = ToastImporter("You need to Register first!")
     toastWarning()
-    setTimeout(() => window.open(`https://dashboard.partneringtosucceed.com/register?course=${id}`), 1000)
+    setTimeout(() => window.open(`https:/dashboard.partneringtosucceed.com/register?course=${id}`), 1000)
   }
   const fetchCourses = async () => {
     try {
@@ -30,7 +30,6 @@ const MonthlyCourses = () => {
       const data = await result.json()
       if (result.ok) {
         setCourseData(data)
-        console.log(data)
       }
   }
   catch (err) {
@@ -67,8 +66,8 @@ const MonthlyCourses = () => {
             spaceBetween={50}
             slidesPerView={3}
           >
-            {/* {
-              courseData != null ? courseData.data.map(({courseimage, coursename, courseprice, id}) => {
+            {
+              courseData != null ? courseData.map(({courseimage, coursename, courseprice, id}) => {
                 return (
                   <SwiperSlide key={id}>
                     <div className="single-popular-course">
@@ -92,7 +91,7 @@ const MonthlyCourses = () => {
                 )
               })
               : ""
-            } */}
+            }
             {/* <SwiperSlide>
               <div className="single-popular-course">
                 <div className="thumb">
@@ -172,8 +171,8 @@ const MonthlyCourses = () => {
           </Swiper>
         </section>
         <section className="md:hidden">
-            {/* {
-              courseData != null ? courseData.data.map(({courseimage, coursename, courseprice, id}) => {
+            {
+              courseData != null ? courseData.map(({courseimage, coursename, courseprice, id}) => {
                 return (
                   <div key={id} className="single-popular-course">
                     <div className="thumb">
@@ -196,7 +195,7 @@ const MonthlyCourses = () => {
               })
               : ""
             }
-   */}
+  
         </section>
       </div>
     </section>
