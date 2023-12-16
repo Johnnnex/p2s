@@ -38,7 +38,7 @@ const HomePage = () => {
                   />
                   within &quot;9&quot; months
                 </h1>
-                <p className={`mx-auto text-white text-[16px] leading-[20px] mt-20 ${sGrotesk.className}`}>
+                <p className={`mx-auto text-white text-[16px] leading-[20px] mb-20 ${sGrotesk.className}`}>
                   Acquire globally relevant skills and experience you need to become an expert Software Engineer with relevant soft skills for career beyond the border
                 </p>
                 <a href="https://dashboard.partneringtosucceed.com/sign-up" className={`${sGrotesk.className} mb-40`}>
