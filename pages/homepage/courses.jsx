@@ -5,7 +5,6 @@ import Features from '@/reusable-components/features'
 import Hero from '@/reusable-components/hero'
 import QuickRegistration from '@/reusable-components/quick-registration'
 import { Poppins, Space_Grotesk } from 'next/font/google'
-import { useData } from '@/context/DataContext'
 
 
 const sGrotesk = Space_Grotesk({ 
@@ -14,10 +13,6 @@ const sGrotesk = Space_Grotesk({
 })
 
 const Courses = () => {
-  const { setIsOnHomepage } = useData()
-  useEffect (() => {
-    setIsOnHomepage(true)
-  })
   return (
     <>
         <HeadComp title="Partnering To Succeed - Courses" />

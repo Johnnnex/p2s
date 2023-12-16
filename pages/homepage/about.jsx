@@ -5,7 +5,6 @@ import HeadComp from '@/layout/HeadComponent'
 import Testimonial from '@/reusable-components/testimonial'
 import Hero from '@/reusable-components/hero'
 import AboutUs from '@/reusable-components/about-us'
-import { useData } from '@/context/DataContext'
 
 const sGrotesk = Space_Grotesk({ 
     subsets: ['latin'],
@@ -13,10 +12,6 @@ const sGrotesk = Space_Grotesk({
 })
 
 const About = () => {
-  const { setIsOnHomepage } = useData()
-  useEffect (() => {
-    setIsOnHomepage(true)
-  })
 
   return (
     <>

@@ -12,7 +12,6 @@ import QuickRegistration from '@/reusable-components/quick-registration';
 import Features from '@/reusable-components/features';
 import Typewriter from "typewriter-effect";
 import AboutUs from '@/reusable-components/about-us';
-import { useData } from '@/context/DataContext';
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -24,10 +23,6 @@ const sGrotesk = Space_Grotesk({
 })
 
 const HomePage = () => {
-  const { setIsOnHomepage } = useData()
-  useEffect (() => {
-    setIsOnHomepage(true)
-  })
   return (
     <>
       <HeadComp title="Partnering To Succeed - Home" />

@@ -18,7 +18,7 @@ const CoursesContainer = () => {
   const reDirect = (id) => {
     const { toastWarning } = ToastImporter("You need to Register first!")
     toastWarning()
-    push(`/auth/sign-up?course=${id}`)
+    setTimeout(() => window.open(`https:/dashboard.partneringtosucceed.com/register?course=${id}`), 1000)
   }
   const fetchCourses = async () => {
     try {

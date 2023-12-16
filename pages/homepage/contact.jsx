@@ -2,14 +2,9 @@ import { useEffect } from "react"
 import HeadComp from "@/layout/HeadComponent"
 import Hero from "@/reusable-components/hero"
 import GMapsLoader from "@/utils/g-maps-loader"
-import { useData } from "@/context/DataContext"
 
 
 const Contact = () => {
-  const { setIsOnHomepage } = useData()
-  useEffect (() => {
-    setIsOnHomepage(true)
-  })
 
   return (
     <>
