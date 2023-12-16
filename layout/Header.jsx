@@ -71,14 +71,13 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="w-full flex justify-between items-center">
           <Link className={`text-white ${poppins.className} font-[600]`} href="/">
-            {/* <Image height={1} width={50} src="/img/logo.png" alt="logo" /> */}
             P2S
           </Link>
           <button onClick={() => setNavState(!navState)} className="navbar-toggler" type="button">
             <span className="lnr lnr-menu"></span>
           </button>
           <div className={`flex items-center text-center pb-[30px] md:pb-0 pr-[1vw] absolute md:relative bg-[#FC2C2C30] md:bg-transparent w-full left-0 md:top-0 top-[7vh] flex-col md:flex-row transition-[.4s] md:max-h-full ${navState == true ? "" : "classInvisible"} justify-content-end align-items-center`}>
-            <ul className={`${sGrotesk.className} navbar-nav`}>
+            <ul className={`${sGrotesk.className} flex flex-col md:flex-row`}>
               <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
                 <Link className={"/" == pathname && "activeLink"} href="/">
                   Home
@@ -94,24 +93,6 @@ const Header = () => {
                   Courses
                 </Link>
               </li>
-              {/* <li className="dropdown">
-                <a className="dropdown-toggle" href="#" data-toggle="dropdown">
-                  Pages
-                </a>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="elements.html">Elements</a>
-                  <a className="dropdown-item" href="course-details.html">Course Details</a>
-                </div>
-              </li>
-              <li className="dropdown">
-                <a className="dropdown-toggle" href="#" data-toggle="dropdown">
-                  Blog
-                </a>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="blog-home.html">Blog Home</a>
-                  <a className="dropdown-item" href="blog-single.html">Blog Details</a>
-                </div>
-              </li> */}
               <li className={`cursor-pointer uppercase text-white p-[20px] font-[500] text-[12px]`}>
                 <Link className={"/homepage/contact" == pathname && "activeLink"} href="/homepage/contact">
                   Contact
@@ -119,9 +100,9 @@ const Header = () => {
               </li>
 
             </ul>
-            <Link href="/auth/sign-up" className={`${sGrotesk.className} flex gap-[10px]`}>
+            <a href="https://dashboard.partneringtosucceed.com/sign-up" className={`${sGrotesk.className} flex gap-[10px]`}>
               <button className="btn-def btn-red">Apply Now</button>
-            </Link>
+            </a>
         
           </div>
         </div>

@@ -1,9 +1,8 @@
-import { useEffect } from 'react';
 import { Poppins, Space_Grotesk } from 'next/font/google'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Link from "next/link"
 import 'swiper/swiper-bundle.css';
-import { Navigation, A11y, Autoplay, Pagination } from "swiper/modules"
+import { A11y, Autoplay } from "swiper/modules"
 import Image from 'next/image'
 import HeadComp from '@/layout/HeadComponent'
 import Testimonial from '@/reusable-components/testimonial';
@@ -13,10 +12,6 @@ import Features from '@/reusable-components/features';
 import Typewriter from "typewriter-effect";
 import AboutUs from '@/reusable-components/about-us';
 
-const poppins = Poppins({ 
-  subsets: ['latin'],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
-})
 const sGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
   weight: ["300", "400", "500", "600", "700"]
@@ -46,9 +41,9 @@ const HomePage = () => {
                 <p className={`mx-auto text-white text-[16px] leading-[20px] mt-20 ${sGrotesk.className}`}>
                   Acquire globally relevant skills and experience you need to become an expert Software Engineer with relevant soft skills for career beyond the border
                 </p>
-                <Link href="/auth/sign-up" className={`${sGrotesk.className} mb-40`}>
+                <a href="https://dashboard.partneringtosucceed.com/sign-up" className={`${sGrotesk.className} mb-40`}>
                   <button className="btn-def btn-red">Apply Now</button>
-                </Link>
+                </a>
               </div>
               <div className="offset-lg-2 col-lg-5 col-md-12 home-banner-right">
                 <Image className="img-fluid" height={1} width={450} src="/img/header-img.png" alt="" />

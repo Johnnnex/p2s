@@ -10,9 +10,9 @@ const sGrotesk = Space_Grotesk({
   subsets: ['latin'],
   weight: ["300", "400", "500", "600", "700"]
 })
-const CoursesContainer = () => {
+const MonthlyCourses = () => {
   const [courseData, setCourseData] = useState(null)
-  const apiUrl = "http://api.partneringtosucceed.com/api/popularcourses"
+  const apiUrl = "http://api.partneringtosucceed.com/api/mthcourses"
   const reDirect = (id) => {
     const { toastWarning } = ToastImporter("You need to Register first!")
     toastWarning()
@@ -30,6 +30,7 @@ const CoursesContainer = () => {
       const data = await result.json()
       if (result.ok) {
         setCourseData(data)
+        console.log(data)
       }
   }
   catch (err) {
@@ -46,11 +47,11 @@ const CoursesContainer = () => {
         <div className="row justify-content-center section-title">
           <div className="col-lg-12">
             <h2>
-              Popular Courses <br />
+              Monthly Courses <br />
               Available Right Now
             </h2>
             <p className="text-[16px]">
-              Discover the Trending and Highly Sought-After Courses Currently Open for Enrollment
+                Explore this month's curated tech courses on Partnering to Succeed.
             </p>
           </div>
         </div>
@@ -66,7 +67,7 @@ const CoursesContainer = () => {
             spaceBetween={50}
             slidesPerView={3}
           >
-            {
+            {/* {
               courseData != null ? courseData.data.map(({courseimage, coursename, courseprice, id}) => {
                 return (
                   <SwiperSlide key={id}>
@@ -91,7 +92,7 @@ const CoursesContainer = () => {
                 )
               })
               : ""
-            }
+            } */}
             {/* <SwiperSlide>
               <div className="single-popular-course">
                 <div className="thumb">
@@ -171,7 +172,7 @@ const CoursesContainer = () => {
           </Swiper>
         </section>
         <section className="md:hidden">
-            {
+            {/* {
               courseData != null ? courseData.data.map(({courseimage, coursename, courseprice, id}) => {
                 return (
                   <div key={id} className="single-popular-course">
@@ -195,11 +196,11 @@ const CoursesContainer = () => {
               })
               : ""
             }
-  
+   */}
         </section>
       </div>
     </section>
   )
 }
 
-export default CoursesContainer
+export default MonthlyCourses

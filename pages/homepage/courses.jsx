@@ -5,6 +5,7 @@ import Features from '@/reusable-components/features'
 import Hero from '@/reusable-components/hero'
 import QuickRegistration from '@/reusable-components/quick-registration'
 import { Poppins, Space_Grotesk } from 'next/font/google'
+import MonthlyCourses from '@/reusable-components/monthly-courses'
 
 
 const sGrotesk = Space_Grotesk({ 
@@ -78,6 +79,7 @@ const Courses = () => {
             </div>
           </div>
         </section>
+        <MonthlyCourses />
         <CoursesContainer />
         <QuickRegistration />
         <Features />
