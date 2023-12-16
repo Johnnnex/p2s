@@ -56,6 +56,12 @@ const Footer = () => {
               <li><a href="#">Marketing Service</a></li>
             </ul>
           </div> */}
+          <div className="col-lg-6 col-md-6 single-footer-widget">
+            <h4>PARTNERING TO SUCCEED</h4>
+            <p>
+              Providing IT Platforms for individuals and organisations. Trusted and tested solutions for digital ecosystem. One stop training center for trendy digital skills.
+            </p>
+          </div> 
           <div className="col-lg-2 col-md-6 single-footer-widget">
             <h4>Quick Links</h4>
             <ul>
@@ -113,6 +119,16 @@ const Footer = () => {
               </form>
             </div>
           </div> */}
+          <div className="col-lg-4 col-md-6 single-footer-widget">
+            <h4>CONTACT US</h4>
+            <p>
+              Suite A4, Moremart Shopping Plaza <br />
+              62 Jagunmolu, LA 100223 <br />
+              Nigeria <br />
+              <b>Phone:</b> +234 903 626 9538 <br />
+              <b>Email:</b> info@partneringtosucceed.com
+            </p>
+          </div>
         </div>
         <div className="footer-bottom row align-items-center">
           <p className="footer-text m-0 col-lg-8 col-md-12">

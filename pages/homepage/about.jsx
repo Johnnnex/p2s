@@ -88,8 +88,11 @@ const About = () => {
                   </h1>
                   <div className={`text-[16px] ${sGrotesk.className}`}>
                     <p>
+                      Partnering To Succeed (P2S) Limited is an Information and Communication Technology (ICT) company with a vision to provide top-notch support service, advisory and training to encourage the growth of Small and Medium Scale businesses in emerging economy particularly Nigeria.
+                    </p><br />
+                    <p>
                       We are competent, disciplined, excellent, passionate and committed information technology professionals with cognitive expertise from international and multinational companies. We provide classic solutions to comples problems.
-                    </p>
+                    </p><br />
                     <p>
                       We are second to none in Africa in delivering cost-effective solutions particularly in the payment industry and other adjacent companies. We lead a team of excellent and enthusiastic developers to provide cutting edge solutions.
                     </p>

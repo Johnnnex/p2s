@@ -29,9 +29,9 @@ const Contact = () => {
                     <span className="lnr lnr-home"></span>
                   </div>
                   <div className="contact-details">
-                    <h5>Binghamton, New York</h5>
+                    <h5>Lagos, Nigeria</h5>
                     <p>
-                      4343 Hinkle Deegan Lake Road
+                      Suite A4, Moremart Shopping Plaza, 62 Jagunmolu Street, LA 100223
                     </p>
                   </div>
                 </div>
@@ -49,7 +49,7 @@ const Contact = () => {
                     <span className="lnr lnr-envelope"></span>
                   </div>
                   <div className="contact-details">
-                    <h5>support@colorlib.com</h5>
+                    <h5>info@partneringtosucceed.com</h5>
                     <p>Send us your query anytime!</p>
                   </div>
                 </div>
